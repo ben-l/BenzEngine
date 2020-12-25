@@ -1,0 +1,3 @@
+[submodule "bens-engine/vendor/spdlog"]
+	path = bens-engine/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
