@@ -1,4 +1,6 @@
 #include "Application.h"
+#include "Log.h"
+#include "events/ApplicationEvent.h"
 
 namespace BensEngine {
 
@@ -12,6 +14,8 @@ namespace BensEngine {
 
     void Application::Run()
     {
+        WindowResizeEvent e(1280, 720);
+        BE_TRACE(e);
         while(true);
     }
 

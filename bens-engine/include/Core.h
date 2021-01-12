@@ -8,17 +8,21 @@
 #error Bens Engine only supports Linux!
 #endif
 
+#ifdef BE_ENABLE_ASSERTS
+    #define BE_ASSERT(x, ...) { if(!(x)) { \
+            BE_ERROR("Assertion Failed: {0}", __VA_ARGS__); \
+            __debugbreak(); } }
+    #define BE_CORE_ASSERT(x, ...) { if(!(x)) { \
+            BE_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); \
+            __debugbreak(); } }
+#else
+    #define BE_ASSERT(x, ...)
+    #define BE_CORE_ASSERT(x, ...)
+#endif
+
+
 // binary - shift 1 by x places to the left
 // so 1 added by (x) 0s e.g. BIT(4) == 1000
 // converted to decimal is 16
 #define BIT(x) (1 << x)
 
-/*
-#ifdef BE_PLATFORM_LINUX
-    #ifdef BE_BUILD_SO
-        #define BENS_ENGINE_API __attribute__((visibility("default")))
-    #else
-        #define BENS_ENGINE_API 
-    #endif
-#endif
-*/
