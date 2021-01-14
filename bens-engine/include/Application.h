@@ -1,5 +1,8 @@
 #pragma once
 #include "Core.h"
+#include "events/Event.h"
+#include <memory>
+#include "Window.h"
 
 namespace BensEngine {
     class BENS_ENGINE_API Application
@@ -9,6 +12,9 @@ namespace BensEngine {
             virtual ~Application();
 
             void Run();
+        private:
+            std::unique_ptr<Window> m_Window;
+            bool m_Running = true;
     };
     // to be defined in client (sandboxapp)
     Application* CreateApplication();
