@@ -4,6 +4,7 @@ In Development...
 ## Setup
 
 Create a build directory in the root folder
+
 	mkdir build && cd "$_"
 	cmake ..
 	make
