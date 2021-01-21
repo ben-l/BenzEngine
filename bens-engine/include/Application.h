@@ -1,8 +1,7 @@
 #pragma once
-#include "Core.h"
-#include "events/Event.h"
-#include <memory>
-#include "Window.h"
+#include <bepch.h>
+#include <Core.h>
+#include <Window.h>
 
 namespace BensEngine {
     class BENS_ENGINE_API Application

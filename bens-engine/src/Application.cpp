@@ -1,3 +1,4 @@
+#include <bepch.h>
 #include "Application.h"
 #include "GLFW/glfw3.h"
 #include "Log.h"

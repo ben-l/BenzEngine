@@ -8,6 +8,6 @@ CPPFLAGS += -DBE_PLATFORM_LINUX \
 			BE_BUILD_SO
 output: $(SRC)/SandboxApp.cpp
 	# build the .so file from bens-engine first
-	g++ $(INC) -fPIC -shared ../bens-engine/src/Application.cpp ../bens-engine/src/Log.cpp ../bens-engine/src/LinuxWindow.cpp -o $(LIB)/libtest.so
+	#g++ $(INC) -fPIC -shared ../bens-engine/src/Application.cpp ../bens-engine/src/Log.cpp ../bens-engine/src/LinuxWindow.cpp -o $(LIB)/libtest.so
 	# if there are any changes to the above file(s), recompile and execute:
 	g++ -L$(LIB) $(INC) -Wl,-rpath=$(LIB) -lglfw -lglut -ltest $(SRC)/SandboxApp.cpp -o $(BIN)/SandboxApp && ./$(BIN)/SandboxApp

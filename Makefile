@@ -1,5 +1,6 @@
 INC += -Ibens-engine/include \
-	   -Ibens-engine/vendor/spdlog/include
+	   -Ibens-engine/vendor/spdlog/include \
+	   -Ibens-engine/vendor/glfw/include
 SRC=bens-engine/src
 BIN=bens-engine/bin
 LIB=bens-engine/lib
