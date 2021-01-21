@@ -5,7 +5,7 @@ In Development...
 
 Create a build directory in the root folder
 
-	mkdir build && cd "$_"
+	mkdir build && cd $_
 	cmake ..
 	make
 
