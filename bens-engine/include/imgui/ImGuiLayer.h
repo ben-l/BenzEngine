@@ -2,7 +2,7 @@
 #include <Layer.h>
 
 namespace BensEngine {
-    class ImGuiLayer : public Layer {
+    class BENS_ENGINE_API ImGuiLayer : public Layer {
         public:
             ImGuiLayer();
             ~ImGuiLayer();
@@ -12,7 +12,7 @@ namespace BensEngine {
             void OnUpdate();
             void OnEvent(Event& event);
         private:
-            pass
+            float m_Time = 0.0f;
 
     };
 }
