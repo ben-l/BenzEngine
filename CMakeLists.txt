@@ -9,7 +9,7 @@ include_directories(
 		bens-engine/vendor/glfw/include
 		bens-engine/vendor/glad/include
 		bens-engine/vendor/spdlog/include
-		bens-engine/vendor/imgui/imgui
+		bens-engine/vendor/imgui
 		bens-engine/platform/opengl
 )
 

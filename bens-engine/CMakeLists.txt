@@ -3,18 +3,18 @@ project(Engine)
 add_subdirectory(vendor/glfw)
 add_subdirectory(vendor/spdlog)
 add_subdirectory(vendor/glad)
-add_subdirectory(vendor/imgui)
 
+file(GLOB
+		SOURCES CONFIGURE_DEPENDS
+		src/*.cpp
+		src/imgui/*.cpp
+		platform/opengl/*.cpp
+		vendor/imgui/*.cpp
+)
 
 add_library(test SHARED
-		src/bepch.cpp
-		src/Application.cpp
-		src/LinuxWindow.cpp
-		src/Log.cpp
-		src/Layer.cpp
-		src/LayerStack.cpp
-		src/imgui/ImGuiLayer.cpp
-		platform/opengl/ImGuiOpenGLRenderer.cpp
+		${SOURCES}
+
 )
 target_precompile_headers(test
 		PRIVATE include/bepch.h
