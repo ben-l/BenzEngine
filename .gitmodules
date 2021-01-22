@@ -4,3 +4,6 @@
 [submodule "bens-engine/vendor/glfw"]
 	path = bens-engine/vendor/glfw
 	url = https://github.com/glfw/glfw.git
+[submodule "bens-engine/vendor/imgui"]
+	path = bens-engine/vendor/imgui
+	url = https://github.com/ocornut/imgui

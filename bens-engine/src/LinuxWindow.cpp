@@ -1,8 +1,10 @@
+#include <bepch.h>
 #include <LinuxWindow.h>
 #include <Log.h>
 #include <ApplicationEvent.h>
 #include <MouseEvent.h>
 #include <KeyEvent.h>
+#include <glad/glad.h>
 
 namespace BensEngine {
     
@@ -45,6 +47,8 @@ namespace BensEngine {
         m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, 
                                     m_Data.Title.c_str(), nullptr, nullptr);
         glfwMakeContextCurrent(m_Window);
+        int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+        BE_CORE_ASSERT(status, "Failed to initialize Glad!");
         glfwSetWindowUserPointer(m_Window, &m_Data);
         SetVSync(true);
 

@@ -2,6 +2,7 @@ project(Engine)
 
 add_subdirectory(vendor/glfw)
 add_subdirectory(vendor/spdlog)
+add_subdirectory(vendor/glad)
 
 
 add_library(test SHARED
@@ -9,7 +10,10 @@ add_library(test SHARED
 		src/Application.cpp
 		src/LinuxWindow.cpp
 		src/Log.cpp
+		src/Layer.cpp
+		src/LayerStack.cpp
 )
 target_precompile_headers(test
 		PRIVATE include/bepch.h
 )
+target_compile_definitions(test PRIVATE GLFW_INCLUDE_NONE)
