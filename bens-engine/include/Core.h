@@ -26,3 +26,5 @@
 // converted to decimal is 16
 #define BIT(x) (1 << x)
 
+#define BE_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
+
