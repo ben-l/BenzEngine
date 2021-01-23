@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.19.2)
+set (CMAKE_CXX_STANDARD 17)
 
 project(BensEngine)
 
@@ -11,6 +12,7 @@ include_directories(
 		bens-engine/vendor/spdlog/include
 		bens-engine/vendor/imgui
 		bens-engine/platform/opengl
+		bens-engine/platform/linux
 )
 
 add_subdirectory(bens-engine)

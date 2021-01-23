@@ -1,5 +1,6 @@
 # Bens Engine
 In Development...
+Linux support only
 
 ## Setup
 

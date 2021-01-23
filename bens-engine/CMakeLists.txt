@@ -9,6 +9,7 @@ file(GLOB
 		src/*.cpp
 		src/imgui/*.cpp
 		platform/opengl/*.cpp
+		platform/linux/*.cpp
 		vendor/imgui/*.cpp
 )
 
