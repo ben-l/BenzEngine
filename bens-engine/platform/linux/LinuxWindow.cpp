@@ -44,13 +44,11 @@ namespace BensEngine {
             s_GLFWInitialized = true;
         }
 
-        //debian stretch does not seem to support MAJOR 4
-        //glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-		//glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
-		//glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-		//#if defined(__linux__)
-		//glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW_TRUE);
-		//#endif
+		#if defined(__linux__)
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+		    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+		    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+		#endif
 
         m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, 
                                     m_Data.Title.c_str(), nullptr, nullptr);
