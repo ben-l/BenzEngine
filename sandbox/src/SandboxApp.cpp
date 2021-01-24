@@ -9,12 +9,19 @@ class ExampleLayer : public BensEngine::Layer
 
         void OnUpdate() override
         {
-            BE_INFO("ExampleLayer::Update");
+            //BE_INFO("ExampleLayer::Update");
+            if(BensEngine::Input::IsKeyPressed(BE_KEY_TAB))
+                    BE_TRACE("Tab key is pressed");
         }
 
         void OnEvent(BensEngine::Event& event) override
         {
-            BE_TRACE("{0}", event);
+            // BE_TRACE("{0}", event);
+            if(event.GetEventType() == BensEngine::EventType::KeyPressed)
+            {
+                BensEngine::KeyPressedEvent& e = (BensEngine::KeyPressedEvent&)event;
+                BE_TRACE("{0}", (char)e.GetKeyCode());
+            }
         }
 };
 
