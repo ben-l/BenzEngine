@@ -11,7 +11,8 @@ include_directories(
 		bens-engine/vendor/glad/include
 		bens-engine/vendor/spdlog/include
 		bens-engine/vendor/imgui
-		bens-engine/platform/opengl
+		bens-engine/vendor/imgui/backends
+		bens-engine/vendor/glm/glm
 		bens-engine/platform/linux
 )
 

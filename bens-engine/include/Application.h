@@ -4,6 +4,7 @@
 #include <Window.h>
 #include <LayerStack.h>
 #include <ApplicationEvent.h>
+#include <ImGuiLayer.h>
 
 namespace BensEngine {
     class BENS_ENGINE_API Application
@@ -25,6 +26,7 @@ namespace BensEngine {
             bool OnWindowClose(WindowCloseEvent& e);
 
             std::unique_ptr<Window> m_Window;
+            ImGuiLayer* m_ImGuiLayer;
             bool m_Running = true;
             LayerStack m_LayerStack;
         private:
