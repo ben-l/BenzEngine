@@ -1,8 +1,5 @@
 #include <BensEngine.h>
 
-#include <glm/vec3.hpp>// glm::vec3
-#include <glm/geometric.hpp>// glm::cross, glm::normalize
-
 class ExampleLayer : public BensEngine::Layer
 {
     public:
