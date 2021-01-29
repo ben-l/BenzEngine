@@ -1,8 +1,9 @@
 #pragma once
 
 #ifdef __linux__ 
-    //linux code goes here
-    #define BENS_ENGINE_API __attribute__((visibility("default")))
+    // not needed for static library
+    //#define BENS_ENGINE_API __attribute__((visibility("default")))
+    #define BENS_ENGINE_API
 #else
 #error Bens Engine only supports Linux!
 #endif

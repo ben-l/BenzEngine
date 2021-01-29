@@ -1,4 +1,5 @@
 #include <BensEngine.h>
+#include <imgui.h>
 
 class ExampleLayer : public BensEngine::Layer
 {
@@ -12,6 +13,12 @@ class ExampleLayer : public BensEngine::Layer
             //BE_INFO("ExampleLayer::Update");
             if(BensEngine::Input::IsKeyPressed(BE_KEY_TAB))
                     BE_TRACE("Tab key is pressed");
+        }
+
+        virtual void OnImGuiRender() override{
+            ImGui::Begin("Test");
+            ImGui::Text("Hello World");
+            ImGui::End();
         }
 
         void OnEvent(BensEngine::Event& event) override

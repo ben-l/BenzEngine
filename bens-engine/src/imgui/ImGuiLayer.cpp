@@ -4,10 +4,12 @@
 #include <backends/imgui_impl_glfw.h>
 #include <backends/imgui_impl_opengl3.h>
 
+#include <Application.h>
+
+// TEMPORARY
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
 
-#include <Application.h>
 
 namespace BensEngine {
     ImGuiLayer::ImGuiLayer() : Layer("ImGuiLayer")
@@ -70,7 +72,7 @@ namespace BensEngine {
     {
         ImGuiIO& io = ImGui::GetIO();
         Application& app = Application::Get();
-        io.DisplaySize = ImVec2(app.GetWindow().GetWidth(), app.GetWindow().GetHeight());
+        io.DisplaySize = ImVec2((float)app.GetWindow().GetWidth(), (float)app.GetWindow().GetHeight());
 
         // Rendering
         ImGui::Render();

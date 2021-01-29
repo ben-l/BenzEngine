@@ -33,6 +33,7 @@ todo.txt
 *.out
 *.app
 
+imgui.ini
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles

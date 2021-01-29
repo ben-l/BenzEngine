@@ -7,6 +7,7 @@ include_directories(
 		bens-engine/include
 		bens-engine/include/events
 		bens-engine/include/imgui
+		bens-engine/include/renderer
 		bens-engine/vendor/glfw/include
 		bens-engine/vendor/glad/include
 		bens-engine/vendor/spdlog/include
@@ -14,6 +15,7 @@ include_directories(
 		bens-engine/vendor/imgui/backends
 		bens-engine/vendor/glm/glm
 		bens-engine/platform/linux
+		bens-engine/platform/opengl
 )
 
 add_subdirectory(bens-engine)

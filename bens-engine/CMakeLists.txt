@@ -8,11 +8,12 @@ file(GLOB
 		SOURCES CONFIGURE_DEPENDS
 		src/*.cpp
 		src/imgui/*.cpp
-		platform/linux/*.cpp
 		vendor/imgui/*.cpp
+		platform/linux/*.cpp
+        platform/opengl/*.cpp
 )
 
-add_library(test SHARED
+add_library(test STATIC
 		${SOURCES}
 
 )
@@ -22,4 +23,5 @@ target_precompile_headers(test
 target_compile_definitions(test 
     PRIVATE 
         GLFW_INCLUDE_NONE 
+        _CRT_SECURE_NO_WARNINGS
 )
