@@ -11,6 +11,7 @@ file(GLOB
 		vendor/imgui/*.cpp
 		platform/linux/*.cpp
         platform/opengl/*.cpp
+		include/renderer/*.cpp
 )
 
 add_library(test STATIC

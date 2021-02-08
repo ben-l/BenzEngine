@@ -1,6 +1,5 @@
 #include <bepch.h>
 #include <LinuxWindow.h>
-#include <Log.h>
 #include <ApplicationEvent.h>
 #include <MouseEvent.h>
 #include <KeyEvent.h>

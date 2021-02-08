@@ -1,6 +1,5 @@
 #include <bepch.h>
 #include <OpenGLContext.h>
-#include <Log.h>
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>

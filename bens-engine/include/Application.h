@@ -6,6 +6,8 @@
 #include <ApplicationEvent.h>
 #include <ImGuiLayer.h>
 
+#include <Shader.h>
+
 namespace BensEngine {
     class BENS_ENGINE_API Application
     {
@@ -31,6 +33,7 @@ namespace BensEngine {
             LayerStack m_LayerStack;
 
             unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+            std::unique_ptr<Shader> m_Shader;
         private:
             static Application* s_Instance;
     };
