@@ -6,12 +6,12 @@ add_subdirectory(vendor/glad)
 
 file(GLOB
 		SOURCES CONFIGURE_DEPENDS
-		src/*.cpp
-		src/imgui/*.cpp
+		core/*.cpp
+		imgui/*.cpp
 		vendor/imgui/*.cpp
 		platform/linux/*.cpp
         platform/opengl/*.cpp
-		include/renderer/*.cpp
+		renderer/*.cpp
 )
 
 add_library(test STATIC
@@ -19,7 +19,7 @@ add_library(test STATIC
 
 )
 target_precompile_headers(test
-		PRIVATE include/bepch.h
+		PRIVATE core/bepch.h
 )
 target_compile_definitions(test 
     PRIVATE 

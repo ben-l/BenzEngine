@@ -1,7 +1,7 @@
 #pragma once
 
 #include <Core.h>
-#include <events/Event.h>
+#include <Event.h>
 
 namespace BensEngine {
     struct WindowProps {

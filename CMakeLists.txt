@@ -4,10 +4,10 @@ set (CMAKE_CXX_STANDARD 17)
 project(BensEngine)
 
 include_directories(
-		bens-engine/include
-		bens-engine/include/events
-		bens-engine/include/imgui
-		bens-engine/include/renderer
+		bens-engine/core
+		bens-engine/events
+		bens-engine/imgui
+		bens-engine/renderer
 		bens-engine/vendor/glfw/include
 		bens-engine/vendor/glad/include
 		bens-engine/vendor/spdlog/include
