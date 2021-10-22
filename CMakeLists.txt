@@ -1,23 +1,23 @@
 cmake_minimum_required(VERSION 3.19.2)
 set (CMAKE_CXX_STANDARD 17)
 
-project(BensEngine)
+project(BenzEngine)
 
 include_directories(
-		bens-engine/core
-		bens-engine/events
-		bens-engine/imgui
-		bens-engine/renderer
-		bens-engine/vendor/glfw/include
-		bens-engine/vendor/glad/include
-		bens-engine/vendor/spdlog/include
-		bens-engine/vendor/imgui
-		bens-engine/vendor/imgui/backends
-		bens-engine/vendor/glm/glm
-		bens-engine/platform/linux
-		bens-engine/platform/opengl
+		engine/core
+		engine/events
+		engine/imgui
+		engine/renderer
+		engine/vendor/glfw/include
+		engine/vendor/glad/include
+		engine/vendor/spdlog/include
+		engine/vendor/imgui
+		engine/vendor/imgui/backends
+		engine/vendor/glm/glm
+		engine/platform/linux
+		engine/platform/opengl
 )
 
-add_subdirectory(bens-engine)
+add_subdirectory(engine)
 add_subdirectory(sandbox)
 

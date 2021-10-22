@@ -1,7 +1,7 @@
-#include <BensEngine.h>
+#include <BenzEngine.h>
 #include <imgui.h>
 
-class ExampleLayer : public BensEngine::Layer
+class ExampleLayer : public BenzEngine::Layer
 {
     public:
         ExampleLayer() : Layer("Example")
@@ -11,7 +11,7 @@ class ExampleLayer : public BensEngine::Layer
         void OnUpdate() override
         {
             //BE_INFO("ExampleLayer::Update");
-            if(BensEngine::Input::IsKeyPressed(BE_KEY_TAB))
+            if(BenzEngine::Input::IsKeyPressed(BE_KEY_TAB))
                     BE_TRACE("Tab key is pressed");
         }
 
@@ -21,18 +21,18 @@ class ExampleLayer : public BensEngine::Layer
             ImGui::End();
         }
 
-        void OnEvent(BensEngine::Event& event) override
+        void OnEvent(BenzEngine::Event& event) override
         {
             // BE_TRACE("{0}", event);
-            if(event.GetEventType() == BensEngine::EventType::KeyPressed)
+            if(event.GetEventType() == BenzEngine::EventType::KeyPressed)
             {
-                BensEngine::KeyPressedEvent& e = (BensEngine::KeyPressedEvent&)event;
+                BenzEngine::KeyPressedEvent& e = (BenzEngine::KeyPressedEvent&)event;
                 BE_TRACE("{0}", (char)e.GetKeyCode());
             }
         }
 };
 
-class Sandbox : public BensEngine::Application
+class Sandbox : public BenzEngine::Application
 {
 public:
     Sandbox()
@@ -44,7 +44,7 @@ public:
     }
 };
 
-BensEngine::Application* BensEngine::CreateApplication()
+BenzEngine::Application* BenzEngine::CreateApplication()
 {
     return new Sandbox();
 }
