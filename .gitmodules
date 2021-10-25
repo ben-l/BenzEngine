@@ -1,12 +1,12 @@
-[submodule "bens-engine/vendor/spdlog"]
+[submodule "engine/vendor/spdlog"]
 	path = engine/vendor/spdlog
 	url = https://github.com/gabime/spdlog.git
-[submodule "bens-engine/vendor/glfw"]
+[submodule "engine/vendor/glfw"]
 	path = engine/vendor/glfw
 	url = https://github.com/glfw/glfw.git
-[submodule "bens-engine/vendor/imgui"]
+[submodule "engine/vendor/imgui"]
 	path = engine/vendor/imgui
 	url = https://github.com/ocornut/imgui
-[submodule "bens-engine/vendor/glm"]
+[submodule "engine/vendor/glm"]
 	path = engine/vendor/glm
 	url = https://github.com/g-truc/glm.git
