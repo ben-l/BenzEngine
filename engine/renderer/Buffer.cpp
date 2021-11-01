@@ -9,8 +9,8 @@ namespace BenzEngine {
      {
          switch(Renderer::GetAPI())
          {
-             case RendererAPI::None: BE_CORE_ASSERT(false, "RendererAPI::None is currently not supported"); return nullptr; 
-             case RendererAPI::OpenGL: return new OpenGLVertexBuffer(vertices, size);
+             case RendererAPI::API::None: BE_CORE_ASSERT(false, "RendererAPI::API::None is currently not supported"); return nullptr; 
+             case RendererAPI::API::OpenGL: return new OpenGLVertexBuffer(vertices, size);
          }
          BE_CORE_ASSERT(false, "Unknown RendererAPI!");
          return nullptr;
@@ -21,8 +21,8 @@ namespace BenzEngine {
      {
          switch(Renderer::GetAPI())
          {
-             case RendererAPI::None: BE_CORE_ASSERT(false, "RendererAPI::None is currently not supported"); return nullptr;
-             case RendererAPI::OpenGL: return new OpenGLIndexBuffer(indices, size);
+             case RendererAPI::API::None: BE_CORE_ASSERT(false, "RendererAPI::API::None is currently not supported"); return nullptr;
+             case RendererAPI::API::OpenGL: return new OpenGLIndexBuffer(indices, size);
          }
          BE_CORE_ASSERT(false, "Unknown RendererAPI!");
          return nullptr;
