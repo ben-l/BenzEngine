@@ -10,6 +10,8 @@
 #include <Buffer.h>
 #include <VertexArray.h>
 
+#include <OrthographicCamera.h>
+
 namespace BenzEngine {
     class BENZ_ENGINE_API Application
     {
@@ -39,6 +41,8 @@ namespace BenzEngine {
 
             std::shared_ptr<Shader> m_Shader2;
             std::shared_ptr<VertexArray> m_SquareVA;
+
+            OrthographicCamera m_Camera;
         private:
             static Application* s_Instance;
     };
