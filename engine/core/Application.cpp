@@ -3,6 +3,7 @@
 #include <Renderer.h>
 
 #include <Input.h>
+#include <GLFW/glfw3.h>
 
 namespace BenzEngine {
     #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
@@ -49,14 +50,14 @@ namespace BenzEngine {
 
     void Application::Run()
     {
-        /*
-        WindowResizeEvent e(1280, 720);
-        BE_TRACE(e);
-        while(true);
-        */
-        while (m_Running){
+        while (m_Running)
+        {
+            float time = (float)glfwGetTime();
+            Timestep timestep = time - m_LastFrameTime;
+            m_LastFrameTime = time;
+
             for(Layer* layer : m_LayerStack)
-                layer->OnUpdate();
+                layer->OnUpdate(timestep);
 
             m_ImGuiLayer->Begin();
             for (Layer* layer : m_LayerStack)

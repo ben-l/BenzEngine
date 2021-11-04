@@ -116,25 +116,26 @@ class ExampleLayer : public BenzEngine::Layer
         	m_Shader2.reset(new BenzEngine::Shader(vertexSrc2, fragmentSrc2));
         }
 
-        void OnUpdate() override
+        void OnUpdate(BenzEngine::Timestep ts) override
         {
+
 			if (BenzEngine::Input::IsKeyPressed(BE_KEY_LEFT))
-				m_CameraPosition.x -= m_CameraMoveSpeed;
+				m_CameraPosition.x -= m_CameraMoveSpeed * ts;
 
 			else if (BenzEngine::Input::IsKeyPressed(BE_KEY_RIGHT))
-				m_CameraPosition.x += m_CameraMoveSpeed;
+				m_CameraPosition.x += m_CameraMoveSpeed * ts;
 
 			if (BenzEngine::Input::IsKeyPressed(BE_KEY_UP))
-				m_CameraPosition.y += m_CameraMoveSpeed;
+				m_CameraPosition.y += m_CameraMoveSpeed * ts;
 
 			else if (BenzEngine::Input::IsKeyPressed(BE_KEY_DOWN))
-				m_CameraPosition.y -= m_CameraMoveSpeed;
+				m_CameraPosition.y -= m_CameraMoveSpeed * ts;
 
 			if (BenzEngine::Input::IsKeyPressed(BE_KEY_A))
-				m_CameraRotation += m_CameraRotationSpeed;
+				m_CameraRotation += m_CameraRotationSpeed * ts;
 
 			if (BenzEngine::Input::IsKeyPressed(BE_KEY_D))
-				m_CameraRotation -= m_CameraRotationSpeed;
+				m_CameraRotation -= m_CameraRotationSpeed * ts;
 
 			BenzEngine::RenderCommand::SetClearColor({0.89, 0.47, 0.20, 1});
 			BenzEngine::RenderCommand::Clear();
@@ -168,10 +169,10 @@ class ExampleLayer : public BenzEngine::Layer
 
 		BenzEngine::OrthographicCamera m_Camera;
 		glm::vec3 m_CameraPosition;
-		float m_CameraMoveSpeed = 0.1f;
+		float m_CameraMoveSpeed = 5.0f;
 
 		float m_CameraRotation = 0.0f;
-		float m_CameraRotationSpeed = 2.0f;
+		float m_CameraRotationSpeed = 180.0f;
 };
 
 class Sandbox : public BenzEngine::Application
