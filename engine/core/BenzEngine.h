@@ -9,5 +9,17 @@
 #include <KeyCodes.h>
 #include <MouseButtonCodes.h>
 
+// Renderer
+#include <Renderer.h>
+#include <RenderCommand.h>
+
+#include <Buffer.h>
+#include <Shader.h>
+#include <VertexArray.h>
+//
+
+#include <OrthographicCamera.h>
+
 // Entry Point
 #include <EntryPoint.h>
+//
